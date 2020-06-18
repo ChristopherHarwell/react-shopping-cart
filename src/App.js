@@ -22,7 +22,8 @@ function App() {
 	 to add the given item to the shopping cart */
   const addItem = (item) => {
     // add the given item to the cart
-    setCart(item);
+     setCart(products);
+     console.log("Cart: ", cart.length, "Item: ", item)
   };
 
   return (
@@ -35,7 +36,7 @@ function App() {
       <ProductContext.Provider value={{ products, addItem }}>
         {" "}
         {/* Next pass a value prop to your `Provider`. */}
-        <CartContext.Provider>
+        <CartContext.Provider value={{cart}}>
           <Navigation />
 
           {/* Routes */}
