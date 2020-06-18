@@ -22,7 +22,7 @@ function App() {
 	 to add the given item to the shopping cart */
   const addItem = (item) => {
     // add the given item to the cart
-     setCart(products);
+     setCart([...cart, item]);
      console.log("Cart: ", cart.length, "Item: ", item)
   };
 
